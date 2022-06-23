@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import { formatCurrency } from '../utilities/formatCurrency';
  
 type StoreItemProps = {
@@ -11,6 +11,7 @@ type StoreItemProps = {
 
 function StoreItem(props: StoreItemProps) {
     const {id, name, price, imgUrl} = props;
+    const quantity = 0;
     return (
         <div>
             <Card>
@@ -25,6 +26,36 @@ function StoreItem(props: StoreItemProps) {
                         <span>{name}</span>
                         <span>{formatCurrency(price)}</span>
                     </Card.Title>
+                    <div className="mt-auto">
+                        {
+                            (quantity === 0)
+                            ? (
+                                <Button className="w-100">+ Add To Cart</Button>
+                            ) : (
+                                <div
+                                    className="d-flex align-items-center justify-content-between flex-row"
+                                    style={{ gap: ".5rem" }}
+                                    >
+                                    <Button
+                                        variant="outline-danger"
+                                        size="sm"
+                                    >
+                                        Remove
+                                    </Button>
+                                    <div
+                                        className="d-flex align-items-center justify-content-center"
+                                        style={{ gap: ".5rem" }}
+                                    >
+                                        <Button>-</Button>
+                                        <div>
+                                            <span className="fs-3">{quantity}</span> in cart
+                                        </div>
+                                        <Button>+</Button>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    </div>
                 </Card.Body>
             </Card>
         </div>
