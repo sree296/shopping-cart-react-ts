@@ -1,7 +1,8 @@
 import React from 'react'
 import { Button, Card } from 'react-bootstrap';
 import { formatCurrency } from '../utilities/formatCurrency';
- 
+import { useShoppingCart } from '../context/ShoppingCartContext';
+
 type StoreItemProps = {
     id: number,
     name: string,
@@ -10,8 +11,16 @@ type StoreItemProps = {
 };
 
 function StoreItem(props: StoreItemProps) {
+
+    const {
+        getItemQuantity,
+        increaseCartQuantity,
+        decreaseCartQuantity,
+        removeFromCart,
+      } = useShoppingCart()
+
     const {id, name, price, imgUrl} = props;
-    const quantity = 0;
+    const quantity = getItemQuantity(id);
     return (
         <div>
             <Card>
@@ -30,7 +39,7 @@ function StoreItem(props: StoreItemProps) {
                         {
                             (quantity === 0)
                             ? (
-                                <Button className="w-100">+ Add To Cart</Button>
+                                <Button className="w-100" onClick={() => increaseCartQuantity(id)}>+ Add To Cart</Button>
                             ) : (
                                 <div
                                     className="d-flex align-items-center justify-content-between flex-row"
@@ -50,7 +59,7 @@ function StoreItem(props: StoreItemProps) {
                                         <div>
                                             <span className="fs-3">{quantity}</span> in cart
                                         </div>
-                                        <Button>+</Button>
+                                        <Button onClick={() => increaseCartQuantity(id)}>+</Button>
                                     </div>
                                 </div>
                             )
