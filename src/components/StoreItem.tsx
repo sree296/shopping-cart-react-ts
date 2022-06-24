@@ -48,6 +48,7 @@ function StoreItem(props: StoreItemProps) {
                                     <Button
                                         variant="outline-danger"
                                         size="sm"
+                                        onClick={()=> removeFromCart(id)}
                                     >
                                         Remove
                                     </Button>
@@ -55,7 +56,7 @@ function StoreItem(props: StoreItemProps) {
                                         className="d-flex align-items-center justify-content-center"
                                         style={{ gap: ".5rem" }}
                                     >
-                                        <Button>-</Button>
+                                        <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
                                         <div>
                                             <span className="fs-3">{quantity}</span> in cart
                                         </div>
