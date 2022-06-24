@@ -1,12 +1,15 @@
+// Import Packages
 import { Routes, Route } from 'react-router';
 import { Container } from 'react-bootstrap';
+
+// Import components
 import Home from './pages/Home';
 import About from './pages/About';
 import Store from './pages/Store';
 import Navbar from './components/Navbar';
-import {ShoppingCartProvider} from './context/ShoppingCartContext';
 
-import './App.css'
+// Import Context
+import {ShoppingCartProvider} from './context/ShoppingCartContext';
 
 function App() {
 

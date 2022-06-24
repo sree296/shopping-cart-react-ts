@@ -1,16 +1,28 @@
-import React from 'react'
+// Import Packages
 import { Offcanvas, Stack } from 'react-bootstrap'
+
+// Import Context
 import { useShoppingCart } from '../context/ShoppingCartContext'
+
+// Import Utils
 import { formatCurrency } from '../utilities/formatCurrency'
+
+// Import Components
 import CartItem from './CartItem'
+
+// Import Data
 import storeItems from "../data/items.json"
 
-
-type ShoppingCartProps = {
+/**
+ * Shopping Cart interface for Props
+ */
+export interface IShoppingCartProps {
     isOpen: boolean,
 }
-function ShoppingCart({isOpen}: ShoppingCartProps) {
-    const {closeCart, cartItems} = useShoppingCart()
+
+function ShoppingCart({isOpen}: IShoppingCartProps) {
+    const {closeCart, cartItems} = useShoppingCart();
+
     return (
         <div>
             <Offcanvas 

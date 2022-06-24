@@ -1,16 +1,23 @@
-import React from 'react'
+// Import Packages
 import { Button, Card } from 'react-bootstrap';
+
+// Import Utils
 import { formatCurrency } from '../utilities/formatCurrency';
+
+// Import Context
 import { useShoppingCart } from '../context/ShoppingCartContext';
 
-type StoreItemProps = {
+/**
+ * Store Item Interface for Props
+ */
+export interface IStoreItemProps {
     id: number,
     name: string,
     price: number,
     imgUrl: string,
 };
 
-function StoreItem(props: StoreItemProps) {
+function StoreItem(props: IStoreItemProps) {
 
     const {
         getItemQuantity,
@@ -21,6 +28,7 @@ function StoreItem(props: StoreItemProps) {
 
     const {id, name, price, imgUrl} = props;
     const quantity = getItemQuantity(id);
+
     return (
         <div>
             <Card>
