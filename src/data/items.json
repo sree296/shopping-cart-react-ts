@@ -1,9 +1,9 @@
 [
     {
       "id": 1,
-      "name": "Book",
-      "price": 10.99,
-      "imgUrl": "/imgs/book.jpg"
+      "name": "Cam",
+      "price": 410.99,
+      "imgUrl": "/imgs/cam.jpg"
     },
     {
       "id": 2,
@@ -13,14 +13,38 @@
     },
     {
       "id": 3,
-      "name": "Banana",
-      "price": 1.05,
-      "imgUrl": "/imgs/banana.jpg"
+      "name": "Keyboard",
+      "price": 10.05,
+      "imgUrl": "/imgs/keyboard.jpg"
     },
     {
       "id": 4,
-      "name": "Car",
-      "price": 14000,
-      "imgUrl": "/imgs/car.jpg"
-    }
+      "name": "Smart Watch",
+      "price": 49,
+      "imgUrl": "/imgs/watch.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Monitor",
+        "price": 110,
+        "imgUrl": "/imgs/monitor.jpg"
+      },
+      {
+        "id": 6,
+        "name": "xBox",
+        "price": 289,
+        "imgUrl": "/imgs/xbox.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Soundbar",
+        "price": 10.05,
+        "imgUrl": "/imgs/soundbar.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Kindle",
+        "price": 124,
+        "imgUrl": "/imgs/kindle.jpg"
+      }
   ]
