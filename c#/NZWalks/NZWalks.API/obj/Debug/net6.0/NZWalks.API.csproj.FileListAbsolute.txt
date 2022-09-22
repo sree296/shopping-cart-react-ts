@@ -61,3 +61,6 @@ C:\Projects\sree296\c#\NZWalks\NZWalks.API\bin\Debug\net6.0\runtimes\win\lib\net
 C:\Projects\sree296\c#\NZWalks\NZWalks.API\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Projects\sree296\c#\NZWalks\NZWalks.API\bin\Debug\net6.0\AutoMapper.dll
 C:\Projects\sree296\c#\NZWalks\NZWalks.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Projects\sree296\c#\NZWalks\NZWalks.API\bin\Debug\net6.0\FluentValidation.dll
+C:\Projects\sree296\c#\NZWalks\NZWalks.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Projects\sree296\c#\NZWalks\NZWalks.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
